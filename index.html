@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Asri Lestari</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ffc0f3, #ffffff, #d0f0ff);
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(to right, #ff69b4, #c084fc);
+            color: white;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /* menu navigasi */
+        .menu {
+            margin-top: 15px;
+        }
+
+        .menu a {
+            margin: 5px;
+            padding: 10px 15px;
+            background: white;
+            color: #c084fc;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #c084fc;
+        }
+
+        .media {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .media img,
+        .media video {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #ff69df, #a5b4fc);
+            color: white;
+            margin-top: 30px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hallo, Selamat Datang 👋</h1>
+        <h3>Portofolio Website Asri Lestari</h3>
+        <p>Tugas Sistem Informasi Manajemen Perikanan</p>
+
+        <!-- MENU NAVIGASI -->
+        <div class="menu">
+            <a href="#profil">Profil</a>
+            <a href="#about">About Me</a>
+            <a href="#galeri">Galeri</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Profil -->
+        <div class="card" id="profil">
+            <h2>Profil</h2>
+            <p><b>Nama:</b> Asri Lestari</p>
+            <p><b>NIM:</b> 2310715320002</p>
+            <p><b>Program Studi:</b> Sosial Ekonomi Perikanan</p>
+            <p><b>Email:</b> asrilestari209@gmail.com</p>
+        </div>
+
+        <!-- About -->
+        <div class="card" id="about">
+            <h2>About Me</h2>
+            <p>
+                Saya Asri Lestari berasal dari Kabupaten Kapuas, Kalimantan Tengah.
+                Lahir pada 27 Juli 2004 dan saat ini berusia 22 tahun.
+            </p>
+            <p>
+                Saya sedang menempuh pendidikan di Universitas Lambung Mangkurat,
+                Fakultas Perikanan dan Ilmu Kelautan, Program Studi Sosial Ekonomi Perikanan,
+                semester 6.
+            </p>
+            <p>
+                Saya tinggal di Jl. Perak Desa Tungkaran Martapura.
+            </p>
+            <p>
+                Hobi saya belanja, traveling, memasak, dan scroll TikTok.
+            </p>
+        </div>
+
+        <!-- Galeri -->
+        <div class="card" id="galeri">
+            <h2>Galeri Foto & Video</h2>
+
+            <div class="media">
+                <img src="foto1.jpeg" alt="Foto 1">
+                <img src="foto2.jpeg" alt="Foto 2">
+                <img src="foto3.jpeg" alt="Foto 3">
+                <img src="foto4.jpeg" alt="Foto 4">
+
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 - Asri Lestari</p>
+    </footer>
+
+</body>
+
+</html>
