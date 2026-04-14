@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Asri Lestari</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+
+            background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+            background-size: 800% 800%;
+            animation: bgMove 12s ease infinite;
+        }
+
+        @keyframes bgMove {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        /* 🌈 pelangi banyak */
+        .rainbow {
+            position: fixed;
+            width: 200px;
+            height: 100px;
+            background: conic-gradient(red, orange, yellow, green, blue, indigo, violet);
+            border-radius: 50%;
+            filter: blur(20px);
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.6;
+        }
+
+        .rainbow:nth-child(1) { top: 0; left: 10%; }
+        .rainbow:nth-child(2) { top: 20%; right: 10%; animation-duration: 8s;}
+        .rainbow:nth-child(3) { bottom: 10%; left: 30%; animation-duration: 10s;}
+
+        @keyframes float {
+            0%,100% {transform: translateY(0);}
+            50% {transform: translateY(25px);}
+        }
+
+        /* 🌸 bunga banyak jatuh */
+        .flower {
+            position: fixed;
+            font-size: 25px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -10%;
+                transform: rotate(0deg);
+            }
+            100% {
+                top: 110%;
+                transform: rotate(360deg);
+            }
+        }
+
+        /* posisi bunga random */
+        .flower:nth-child(4){left:5%; animation-duration:8s;}
+        .flower:nth-child(5){left:15%; animation-duration:10s;}
+        .flower:nth-child(6){left:25%; animation-duration:7s;}
+        .flower:nth-child(7){left:35%; animation-duration:9s;}
+        .flower:nth-child(8){left:45%; animation-duration:6s;}
+        .flower:nth-child(9){left:55%; animation-duration:11s;}
+        .flower:nth-child(10){left:65%; animation-duration:8s;}
+        .flower:nth-child(11){left:75%; animation-duration:10s;}
+        .flower:nth-child(12){left:85%; animation-duration:7s;}
+        .flower:nth-child(13){left:95%; animation-duration:9s;}
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(45deg, pink, rgb(203, 45, 132));
+            color: white;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .menu a {
+            margin: 5px;
+            padding: 10px 15px;
+            background: rgb(255, 192, 231);
+            color: #ff1493;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            transform: scale(1.1);
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card h2 {
+            color: #ff69b4;
+        }
+
+        .media {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .media img, video {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #ff69df, #fca5df);
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- 🌈 pelangi -->
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+
+    <!-- 🌸 bunga banyak -->
+    <div class="flower">🌸</div>
+    <div class="flower">🌼</div>
+    <div class="flower">🌺</div>
+    <div class="flower">🌷</div>
+    <div class="flower">🌸</div>
+    <div class="flower">🌼</div>
+    <div class="flower">🌺</div>
+    <div class="flower">🌷</div>
+    <div class="flower">🌸</div>
+    <div class="flower">🌼</div>
+
+    <header>
+         <h1>Hallo, Selamat Datangg🤗</h1>
+        <h3>Portofolio Website Asri Lestari</h3>
+        <p>Tugas Sistem Informasi Manajemen Perikanan</p>
+
+        <!-- MENU NAVIGASI -->
+        <div class="menu">
+            <a href="#profil">Profil</a>
+            <a href="#about">About Me</a>
+            <a href="#galeri">Galeri Foto</a>
+            <a href="#galerivideo">Galeri Video</a>
+
+        </div>
+    </header>
+ </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Profil -->
+        <div class="card" id="profil">
+            <h2>Profil</h2>
+            <p><b>Nama:</b> Asri Lestari</p>
+            <p><b>NIM:</b> 2310715320002</p>
+            <p><b>Program Studi:</b> Sosial Ekonomi Perikanan</p>
+            <p><b>Email:</b> asrilestari209@gmail.com</p>
+        </div>
+
+         <!-- About -->
+        <div class="card" id="about">
+            <h2>About Me</h2>
+            <p>
+                Saya Asri Lestari berasal dari Kabupaten Kapuas, Kalimantan Tengah.
+                Lahir pada 27 Juli 2004 dan saat ini berusia 22 tahun.
+            </p>
+            <p>
+                Saya sedang menempuh pendidikan di Universitas Lambung Mangkurat,
+                Fakultas Perikanan dan Ilmu Kelautan, Program Studi Sosial Ekonomi Perikanan,
+                semester 6.
+            </p>
+            <p>
+                Saya tinggal di Jl. Perak Desa Tungkaran Martapura.
+            </p>
+            <p>
+                Hobi saya belanja, traveling, memasak, dan scroll TikTok.
+            </p>
+        </div>
+
+        <!-- Galeri -->
+        <div class="card" id="galeri">
+            <h2>Galeri Foto & video</h2>
+
+            <div class="media">
+                <img src="foto1.jpeg" alt="Foto 1">
+                <img src="foto2.jpeg" alt="Foto 2">
+                <img src="foto3.jpeg" alt="Foto 3">
+                <img src="foto4.jpeg" alt="Foto 4">
+
+
+        <!-- Video -->
+          <div class="card" id="galerivideo">
+            <h2> video </h2>
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+    </div>
+    <div class="menu-nav">
+        <a href="halaman2.html">➡️ Tugas 2</a>
+        <a href="index.html" class="home-btn">🏠 Home</a>
+
+    </div>
+
+    <footer>
+        <p>Asri Lestari - 2310715320002</p>
+    </footer>
+
+</body>
+</html>

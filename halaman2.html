@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Formulir Data Keuangan</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    display: flex;
+    background: linear-gradient(270deg, #ffc0cb, #ffd6f6, #fff);
+    background-size: 600% 600%;
+    animation: bgAnim 10s infinite alternate;
+}
+
+@keyframes bgAnim {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #ff99cc;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.sidebar button:hover {
+    background: #ffe6f0;
+}
+
+/* Content */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Form */
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.radio-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 220px;
+    right: 0;
+    background: #ffb6d9;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+}
+
+/* Animasi bunga */
+.flower {
+    position: fixed;
+    top: -50px;
+    font-size: 20px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <button onclick="showSection('demografi')">Data Demografi</button>
+    <button onclick="showSection('bank')">Data Bank</button>
+    <button onclick="showSection('transaksi')">Data Transaksi</button>
+</div>
+
+<div class="content">
+
+    <!-- Demografi -->
+    <div id="demografi" class="section active">
+        <h2>Data Demografi</h2>
+        <input type="text" placeholder="Nama Pengguna">
+
+        <label>Tanggal Lahir</label>
+        <input type="date">
+
+        <input type="text" placeholder="Alamat">
+        <input type="text" placeholder="No Telepon">
+        <input type="email" placeholder="Email">
+
+        <label>Pendidikan</label>
+        <select>
+            <option>SD</option>
+            <option>SMP</option>
+            <option>SMA</option>
+            <option>D3</option>
+            <option>S1</option>
+            <option>S2</option>
+        </select>
+    </div>
+
+    <!-- Bank -->
+    <div id="bank" class="section">
+        <h2>Data Bank</h2>
+
+        <label>Nama Bank</label>
+        <select>
+            <option>BCA</option>
+            <option>BRI</option>
+            <option>BNI</option>
+            <option>Mandiri</option>
+            <option>BSI</option>
+        </select>
+
+        <input type="text" placeholder="Nomor Rekening">
+    </div>
+
+    <!-- Transaksi -->
+    <div id="transaksi" class="section">
+        <h2>Data Transaksi</h2>
+
+        <label>Tanggal Transaksi</label>
+        <input type="date">
+
+        <input type="text" placeholder="Uraian Transaksi">
+
+        <label>Jenis Transaksi</label>
+        <div class="radio-group">
+            <label><input type="radio" name="jenis"> Pemasukan</label>
+            <label><input type="radio" name="jenis"> Pengeluaran</label>
+        </div>
+
+        <input type="number" placeholder="Debet">
+        <input type="number" placeholder="Kredit">
+    </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="menu-nav">
+        <a href="halaman1.html">⬅️ Tugas 1</a>
+        <a href="index.html" class="home-btn">🏠 Home</a>
+    <button onclick="nextSlide()">Next</button>
+
+
+    </div>
+    
+    <button class="submit-btn" onclick=submitdata()">Simpan</button>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+}
+
+function nextSlide() {
+    let sections = ['demografi','bank','transaksi'];
+    let current = document.querySelector('.section.active').id;
+    let index = sections.indexOf(current);
+    let next = (index + 1) % sections.length;
+    showSection(sections[next]);
+}
+
+/* Animasi bunga jatuh */
+function createFlower() {
+    const flower = document.createElement("div");
+    flower.classList.add("flower");
+    flower.innerHTML = "🌸";
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.animationDuration = (3 + Math.random() * 5) + "s";
+    document.body.appendChild(flower);
+
+    setTimeout(() => {
+        flower.remove();
+    }, 8000);
+}
+
+setInterval(createFlower, 500);
+</script>
+
+</body>
+</html>
