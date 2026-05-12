@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Tugas - Asri Lestari</title>
+
+    <style>
+        :root {
+            --pink: #ff69b4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            background: linear-gradient(270deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+            background-size: 800% 800%;
+            animation: bgMove 12s ease infinite;
+        }
+
+        @keyframes bgMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* 🌈 */
+        .rainbow {
+            position: absolute;
+            top: -80px;
+            width: 300px;
+            height: 150px;
+            background: conic-gradient(red, orange, yellow, purple, rgb(255, 0, 153), indigo, violet);
+            border-radius: 50%;
+            filter: blur(20px);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(20px);
+            }
+        }
+
+        /* 🌸💖⭐ umum */
+        .flower,
+        .love,
+        .star {
+            position: absolute;
+            font-size: 28px;
+            animation: fall linear infinite, pinkGlow 2s infinite alternate;
+        }
+
+        /* jatuh */
+        @keyframes fall {
+            0% {
+                top: -10%;
+                transform: rotate(0deg);
+            }
+
+            100% {
+                top: 110%;
+                transform: rotate(360deg);
+            }
+        }
+
+        /* glow pink */
+        @keyframes pinkGlow {
+            0% {
+                filter: drop-shadow(0 0 5px #ff69b4);
+            }
+
+            100% {
+                filter: drop-shadow(0 0 20px #ff1493);
+            }
+        }
+
+        /* 💖 denyut */
+        .love {
+            animation: fall linear infinite, pulse 1.5s infinite, pinkGlow 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.4);
+            }
+        }
+
+        /* ⭐ kedip */
+        .star {
+            animation: fall linear infinite, blink 1s infinite, pinkGlow 2s infinite alternate;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
+        }
+
+        /* 📦 */
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        h1 {
+            color: var(--pink);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            margin-bottom: 20px;
+        }
+
+        /* 🔘 tombol gerak + glow */
+        .btn {
+            display: block;
+            margin: 12px 0;
+            padding: 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6ec4, #f573c1);
+            transition: 0.3s;
+            animation: floatBtn 3s ease-in-out infinite, pinkGlow 2s infinite alternate;
+        }
+
+        @keyframes floatBtn {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* 🏠 */
+        .home-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            text-decoration: none;
+            font-size: 18px;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 15px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="rainbow"></div>
+
+    <!-- 🌸 bunga banyak -->
+    <div class="flower" style="left:5%; animation-duration:7s;">🌸</div>
+    <div class="flower" style="left:15%; animation-duration:9s;">🌼</div>
+    <div class="flower" style="left:25%; animation-duration:6s;">🌺</div>
+    <div class="flower" style="left:35%; animation-duration:10s;">🌷</div>
+    <div class="flower" style="left:45%; animation-duration:8s;">🌸</div>
+    <div class="flower" style="left:55%; animation-duration:7s;">🌹</div>
+    <div class="flower" style="left:65%; animation-duration:9s;">🌻</div>
+    <div class="flower" style="left:75%; animation-duration:6s;">🌼</div>
+    <div class="flower" style="left:85%; animation-duration:8s;">🌺</div>
+
+    <!-- 💖 love banyak -->
+    <div class="love" style="left:10%; animation-duration:8s;">💖</div>
+    <div class="love" style="left:20%; animation-duration:7s;">💕</div>
+    <div class="love" style="left:30%; animation-duration:9s;">💗</div>
+    <div class="love" style="left:40%; animation-duration:6s;">💓</div>
+    <div class="love" style="left:50%; animation-duration:8s;">💞</div>
+    <div class="love" style="left:60%; animation-duration:7s;">❤️</div>
+    <div class="love" style="left:70%; animation-duration:9s;">💖</div>
+    <div class="love" style="left:80%; animation-duration:6s;">💕</div>
+
+    <!-- ⭐ bintang -->
+    <div class="star" style="left:5%; animation-duration:10s;">⭐</div>
+    <div class="star" style="left:25%; animation-duration:8s;">✨</div>
+    <div class="star" style="left:45%; animation-duration:9s;">🌟</div>
+    <div class="star" style="left:65%; animation-duration:7s;">⭐</div>
+    <div class="star" style="left:85%; animation-duration:11s;">✨</div>
+
+    <!-- isi -->
+    <div class="container">
+        <h1>🐈‍⬛ Asri Lestari 🐈‍⬛</h1>
+        <p class="subtitle">Sistem Informasi Manajemen Perikanan</p>
+        <p class="subtitle">Sosial Ekonomi Perikanan</p>
+
+        <a href="https://forms.gle/aJcdJTzowWZEnzr76" class="btn">Analisis Layanan Dompet Digital</a>
+        <a href="TUGAS 4  Asri Lestari.xlsx" class="btn">Diagram Activity </a>
+    </div>
+    <a href="index.html" class="home-btn">🏠 Home</a>
+
+</body>
+
+</html>
